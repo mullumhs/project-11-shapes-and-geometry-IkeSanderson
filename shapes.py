@@ -4,7 +4,7 @@ class Shape:
     def calculate_area(self):
         pass
   
-    def calculate_perimitor(self):
+    def calculate_perimeter(self):
         pass
 
 
@@ -19,9 +19,9 @@ class Rectangle(Shape):
         area = self.height * self.width
         return area
     
-    def calculate_perimitor(self):
-        perimitor = 2 * self.height + 2 * self.width
-        return perimitor
+    def calculate_perimeter(self):
+        perimeter = 2 * self.height + 2 * self.width
+        return perimeter
 
 class Circle(Shape):
     
@@ -30,18 +30,11 @@ class Circle(Shape):
         self.radius = radius
     
     def calculate_area(self):
-        area = math.pi * self.radius^2
+        area = math.pi * self.radius ** 2
         return area
 
-    def calculate_perimitor(self):
-        perimitor = 2 * math.pi * self.radius
-        return perimitor
+    def calculate_perimeter(self):
+        perimeter = 2 * math.pi * self.radius
+        return perimeter
     
 
-rect = Rectangle(10, 10)
-print(rect.calculate_area())
-print(rect.calculate_perimitor())
-
-circ = Circle(1)
-print(circ.calculate_area())
-print(circ.calculate_perimitor())

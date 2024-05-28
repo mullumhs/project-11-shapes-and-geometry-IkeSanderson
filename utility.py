@@ -1,6 +1,14 @@
 def get_int(message):
-    if message.isdigit():
-        message = int(message)
-        return message
-    else:
-        print("Not Digit")
+    
+    while True:
+        try:
+            i = input(message)
+            i = int(i)
+            return i
+        except:
+            print("Not Digit")
+            continue
+
+def print_debug(enabled, message):
+    if enabled:
+        print(message)
